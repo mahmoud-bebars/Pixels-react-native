@@ -195,7 +195,6 @@ const HomeScreen = () => {
     if (scrollViewOffset >= bottomPostion - 1) {
       if (!isEnd) {
         setIsEnd(true);
-        console.log("user reached end of screen");
         // fetch more data
         ++page;
         let params = {
@@ -208,7 +207,6 @@ const HomeScreen = () => {
       }
     } else if (isEnd) {
       setIsEnd(false);
-      console.log("user is Out of Screen End");
     }
   };
 

@@ -12,11 +12,8 @@ export const apiFetch = async (params) => {
         ...params,
       },
     });
-    console.log("fetching data for page ", params.page);
-    console.log(params);
     return { sucess: true, results: data.hits };
   } catch (error) {
-    console.log(error);
     return { sucess: false, results: error.message };
   }
 };

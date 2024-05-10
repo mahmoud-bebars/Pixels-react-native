@@ -78,10 +78,9 @@ const ImageScreen = () => {
     try {
       const { uri } = await FileSystem.downloadAsync(imageURL, filePath);
       setStatus("");
-      console.log("Image Downloaded at: ", uri);
+
       return uri;
     } catch (error) {
-      console.log("download error: ", error.message);
       setStatus("");
       Alert.alert("Image", error.message);
       return null;
